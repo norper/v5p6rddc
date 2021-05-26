@@ -16,15 +16,15 @@ save_csv = True
 
 @torch.no_grad()
 def detect(opt):
+    csv_f = open("results21.csv","w")
+    # i = 21
 
-    i = 21
-
-    while(os.path.exists("results"+str(i)+".csv")):
-        i+=1
-    if opt.rddc_rs == 'result.txt':
-        csv_f = open("results"+str(i)+".csv","w")
-    else:
-        csv_f = open(opt.rddc_rs+"_%g_%g.csv"%(opt.conf_thres, opt.iou_thres),"w")
+    # while(os.path.exists("results"+str(i)+".csv")):
+    #     i+=1
+    # if opt.rddc_rs == 'result.txt':
+    #     csv_f = open("results"+str(i)+".csv","w")
+    # else:
+    #     csv_f = open(opt.rddc_rs+"_%g_%g.csv"%(opt.conf_thres, opt.iou_thres),"w")
         
 
     source, weights, view_img, save_txt, imgsz = opt.source, opt.weights, opt.view_img, opt.save_txt, opt.img_size
